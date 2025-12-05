@@ -4,48 +4,132 @@
 
 ## 🚀 快速開始
 
-### 環境需求
-- Node.js 16+
-- Expo CLI
-- iOS Simulator (Mac) 或 Android Emulator
+### 📋 環境需求
+- **Node.js 18+** (推薦使用 LTS 版本)
+- **npm** 或 **yarn**
+- **手機** (iOS 或 Android) 或 **模擬器**
 
-### 安裝步驟
+### 📱 手機準備 (推薦方式)
+1. 在手機上安裝 **Expo Go** 應用程式
+   - [iOS App Store](https://apps.apple.com/app/expo-go/id982107779)
+   - [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)
 
-1. 安裝 Expo CLI (如果尚未安裝)
+### 💻 電腦端安裝步驟
+
+#### 步驟 1: 複製專案
 ```bash
-npm install -g @expo/cli
+# 複製專案到本地
+git clone <repository-url>
+cd ncu_rentease/react-native
 ```
 
-2. 安裝依賴
+#### 步驟 2: 安裝依賴
 ```bash
+# 使用 npm
 npm install
+
+# 或使用 yarn
+yarn install
 ```
 
-3. 啟動開發伺服器
+#### 步驟 3: 啟動開發伺服器
 ```bash
+# 啟動 Expo 開發伺服器
 npm start
+
+# 如果遇到快取問題，可以清除快取
+npm start --clear
 ```
 
-4. 在模擬器或實體裝置上運行
-- iOS: 按 `i` 或運行 `npm run ios`
-- Android: 按 `a` 或運行 `npm run android`
-- Web: 按 `w` 或運行 `npm run web`
+#### 步驟 4: 在裝置上運行
+
+**方法一：使用 Expo Go (推薦)**
+1. 確保手機和電腦連接同一個 WiFi 網路
+2. 開啟手機上的 Expo Go 應用程式
+3. 掃描終端機中顯示的 QR 碼
+4. 等待應用程式載入完成
+
+**方法二：使用模擬器**
+```bash
+# iOS 模擬器 (僅限 Mac)
+npm run ios
+
+# Android 模擬器
+npm run android
+
+# 網頁版 (開發測試用)
+npm run web
+```
+
+### 🔧 常見問題排解
+
+#### 問題 1: 端口被占用
+```
+› Port 8081 is being used by another process
+? Use port 8082 instead? » (Y/n)
+```
+**解決方案**: 輸入 `Y` 使用其他端口
+
+#### 問題 2: 手機無法連接
+**解決方案**:
+1. 確認手機和電腦在同一個 WiFi 網路
+2. 關閉防火牆或 VPN
+3. 重新啟動開發伺服器: `npm start --clear`
+
+#### 問題 3: 應用程式載入失敗
+**解決方案**:
+1. 在 Expo Go 中搖動手機，選擇 "Reload"
+2. 或重新掃描 QR 碼
+
+#### 問題 4: Node.js 版本過舊
+**解決方案**:
+1. 更新 Node.js 到 18+ 版本
+2. 重新安裝依賴: `npm install`
+
+### 📱 使用 Expo Go 的詳細步驟
+
+1. **下載 Expo Go**
+   - 在手機應用商店搜尋 "Expo Go" 並安裝
+
+2. **啟動開發伺服器**
+   ```bash
+   cd ncu_rentease/react-native
+   npm start
+   ```
+
+3. **連接應用程式**
+   - **Android**: 在 Expo Go 中點擊 "Scan QR Code" 掃描
+   - **iOS**: 使用相機應用程式掃描 QR 碼，然後點擊通知
+
+4. **等待載入**
+   - 首次載入可能需要 1-2 分鐘
+   - 載入完成後即可開始使用應用程式
+
+### 🔄 開發工作流程
+
+1. **修改程式碼** - 在編輯器中修改檔案
+2. **自動重新載入** - Expo 會自動偵測變更並重新載入
+3. **手動重新載入** - 搖動手機選擇 "Reload" 或按 `r` 鍵
+4. **開發者選單** - 搖動手機可開啟開發者選單
 
 ## 📱 主要功能
 
-### 已實現功能
-- ✅ 首頁房源瀏覽
-- ✅ 搜尋功能
-- ✅ 篩選條件
-- ✅ 房源詳情彈窗
-- ✅ 收藏功能
-- ✅ 底部導航
+### ✅ 已實現功能
+- **首頁房源瀏覽** - 完整的50筆房源資料
+- **搜尋功能** - 支援標題和地址搜尋
+- **篩選條件** - 價格、房型、設施篩選
+- **房源詳情** - 完整房源資訊彈窗
+- **收藏功能** - 房源收藏和取消收藏
+- **底部導航** - 五大主要頁面導航
+- **響應式設計** - 適配不同螢幕尺寸
+- **流暢動畫** - 原生動畫效果
 
-### 開發中功能
-- 🚧 地圖頁面
-- 🚧 收藏頁面
-- 🚧 社群頁面
-- 🚧 個人檔案頁面
+### 🚧 開發中功能
+- **地圖頁面** - Google Maps 整合
+- **收藏頁面** - 收藏房源管理
+- **社群頁面** - 評價和轉租資訊
+- **個人檔案** - 遊戲化成就系統
+- **房源比較** - 多房源並排比較
 
 ## 🛠 技術架構
 
