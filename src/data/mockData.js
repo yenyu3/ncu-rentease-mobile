@@ -1369,7 +1369,7 @@ export const missions = [
   }
 ];
 
-// Taylor Swift 歌曲推薦資料
+// 歌曲推薦資料 - 多元化歌單
 export const songRecommendations = [
   {
     id: 1,
@@ -1382,15 +1382,33 @@ export const songRecommendations = [
   },
   {
     id: 2,
-    title: "Shake It Off",
-    artist: "Taylor Swift",
-    lengthMinutes: 3.6,
+    title: "God's Menu",
+    artist: "Stray Kids",
+    lengthMinutes: 3.1,
     mood: "energetic",
-    album: "1989",
-    spotifyUrl: "https://open.spotify.com/album/5AEDGbliTTfjOB8TSm1sxt"
+    album: "GO生",
+    spotifyUrl: "https://open.spotify.com/album/6DWLIzvmiLPAuDWYZqrLQo"
   },
   {
     id: 3,
+    title: "I",
+    artist: "TAEYEON",
+    lengthMinutes: 3.4,
+    mood: "chill",
+    album: "I - The 1st Mini Album",
+    spotifyUrl: "https://open.spotify.com/album/4e7kLQu7SKBUiMtV5WH3A1"
+  },
+  {
+    id: 4,
+    title: "Left & Right",
+    artist: "SEVENTEEN",
+    lengthMinutes: 2.9,
+    mood: "energetic",
+    album: "Sector 1",
+    spotifyUrl: "https://open.spotify.com/album/3q6lN3kfsDgGaQUC7kVASH"
+  },
+  {
+    id: 5,
     title: "Love Story",
     artist: "Taylor Swift",
     lengthMinutes: 3.9,
@@ -1399,22 +1417,94 @@ export const songRecommendations = [
     spotifyUrl: "https://open.spotify.com/album/4hDok0OAJd57SGIT8xuWJH"
   },
   {
-    id: 4,
+    id: 6,
+    title: "Weekend",
+    artist: "TAEYEON",
+    lengthMinutes: 3.2,
+    mood: "focus",
+    album: "Weekend - Single",
+    spotifyUrl: "https://open.spotify.com/album/4tJsXd2onpa4P9lFmkJIKy"
+  },
+  {
+    id: 7,
+    title: "Very Nice",
+    artist: "SEVENTEEN",
+    lengthMinutes: 3.3,
+    mood: "energetic",
+    album: "Love & Letter",
+    spotifyUrl: "https://open.spotify.com/album/7mP7AFehQDonPKEQiXvpvB"
+  },
+  {
+    id: 8,
+    title: "Shake It Off",
+    artist: "Taylor Swift",
+    lengthMinutes: 3.6,
+    mood: "energetic",
+    album: "1989",
+    spotifyUrl: "https://open.spotify.com/album/64LU4c1nfjz1t4VnGhagcg"
+  },
+  {
+    id: 9,
+    title: "INVU",
+    artist: "TAEYEON",
+    lengthMinutes: 3.1,
+    mood: "chill",
+    album: "INVU - The 3rd Album",
+    spotifyUrl: "https://open.spotify.com/album/7i2YLTVQ0dyngRuUqtGmr9"
+  },
+  {
+    id: 10,
+    title: "Don't Wanna Cry",
+    artist: "SEVENTEEN",
+    lengthMinutes: 4.1,
+    mood: "chill",
+    album: "Al1",
+    spotifyUrl: "https://open.spotify.com/album/2BNimvLLlD89e4Sb7ZVX6I"
+  },
+  {
+    id: 11,
     title: "Blank Space",
     artist: "Taylor Swift",
     lengthMinutes: 3.5,
     mood: "focus",
     album: "1989",
-    spotifyUrl: "https://open.spotify.com/album/5AEDGbliTTfjOB8TSm1sxt"
+    spotifyUrl: "https://open.spotify.com/album/64LU4c1nfjz1t4VnGhagcg"
   },
   {
-    id: 5,
+    id: 12,
+    title: "Hot",
+    artist: "SEVENTEEN",
+    lengthMinutes: 3.2,
+    mood: "energetic",
+    album: "Face the Sun",
+    spotifyUrl: "https://open.spotify.com/album/4lfFgz2rD1irxf7dZhNJht"
+  },
+  {
+    id: 13,
     title: "Cardigan",
     artist: "Taylor Swift",
     lengthMinutes: 3.8,
     mood: "chill",
     album: "folklore",
     spotifyUrl: "https://open.spotify.com/album/2fenSS68JI1h4Fo296JfGr"
+  },
+  {
+    id: 14,
+    title: "Fine",
+    artist: "TAEYEON",
+    lengthMinutes: 4.2,
+    mood: "focus",
+    album: "My Voice - The 1st Album",
+    spotifyUrl: "https://open.spotify.com/album/6DlCl3hBP1Gwhn0tgitGfN"
+  },
+  {
+    id: 15,
+    title: "Rock with you",
+    artist: "SEVENTEEN",
+    lengthMinutes: 3.7,
+    mood: "chill",
+    album: "Attacca",
+    spotifyUrl: "https://open.spotify.com/album/2PIReru2w5i4JXOzeZnamd"
   }
 ];
 
