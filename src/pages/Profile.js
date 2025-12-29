@@ -9,10 +9,16 @@ import {
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import MissionList from '../components/MissionList';
+import { StatCard, PopularListingItem } from '../components/StatisticsCharts';
+import { getPopularListings, getUserBehaviorStats } from '../utils/statisticsUtils';
 import useStore from '../store/useStore';
 
 const Profile = () => {
   const { currentUser, getBadgeInfo, musicPlatform, setMusicPlatform } = useStore();
+  
+  // 獲取統計數據
+  const popularListings = getPopularListings().slice(0, 5); // 只顯示前5名
+  const userStats = getUserBehaviorStats();
   
   // 獲取徽章資訊
   const getUserBadges = () => {
@@ -165,6 +171,65 @@ const Profile = () => {
               )}
             </TouchableOpacity>
           </View>
+        </View>
+
+        {/* 用戶行為統計 */}
+        <View style={styles.statisticsCard}>
+          <View style={styles.sectionHeader}>
+            <Feather name="activity" size={20} color="#3A4E6B" />
+            <Text style={styles.sectionTitle}>用戶行為統計</Text>
+          </View>
+          
+          <View style={styles.statsRow}>
+            <StatCard 
+              title="總瀏覽量" 
+              value={userStats.totalViews} 
+              icon="👀"
+            />
+            <StatCard 
+              title="總收藏數" 
+              value={userStats.totalFavorites} 
+              icon="❤️"
+            />
+          </View>
+          <View style={styles.statsRow}>
+            <StatCard 
+              title="搜尋次數" 
+              value={userStats.totalSearches} 
+              icon="🔍"
+            />
+            <StatCard 
+              title="平均停留" 
+              value={userStats.avgSessionTime} 
+              icon="⏱️"
+            />
+          </View>
+          
+          <View style={styles.keywordsSection}>
+            <Text style={styles.keywordsTitle}>🔍 熱門搜尋關鍵字</Text>
+            {userStats.topSearchKeywords.slice(0, 3).map((item, index) => (
+              <View key={index} style={styles.keywordItem}>
+                <Text style={styles.keywordText}>{item.keyword}</Text>
+                <Text style={styles.keywordCount}>{item.count}次</Text>
+              </View>
+            ))}
+          </View>
+        </View>
+
+        {/* 熱門房源排行 */}
+        <View style={styles.statisticsCard}>
+          <View style={styles.sectionHeader}>
+            <Feather name="trending-up" size={20} color="#3A4E6B" />
+            <Text style={styles.sectionTitle}>🔥 熱門房源 TOP 5</Text>
+          </View>
+          
+          {popularListings.map((listing, index) => (
+            <PopularListingItem 
+              key={listing.id} 
+              listing={listing} 
+              rank={index + 1} 
+            />
+          ))}
         </View>
 
         {/* 徽章展示 */}
@@ -544,6 +609,47 @@ const styles = StyleSheet.create({
   platformSubtitle: {
     fontSize: 12,
     color: '#6B7280',
+  },
+  statisticsCard: {
+    backgroundColor: 'white',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 24,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  statsRow: {
+    flexDirection: 'row',
+    marginBottom: 16,
+  },
+  keywordsSection: {
+    marginTop: 8,
+  },
+  keywordsTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#3A4E6B',
+    marginBottom: 12,
+  },
+  keywordItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f0f0f0',
+  },
+  keywordText: {
+    fontSize: 14,
+    color: '#333',
+  },
+  keywordCount: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#9BB7D4',
   },
 });
 

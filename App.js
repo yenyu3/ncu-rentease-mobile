@@ -9,7 +9,6 @@ import Map from './src/pages/Map';
 import Favorites from './src/pages/Favorites';
 import Community from './src/pages/Community';
 import Profile from './src/pages/Profile';
-import Statistics from './src/pages/Statistics';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,8 +29,6 @@ export default function App() {
               iconName = 'heart';
             } else if (route.name === 'Community') {
               iconName = 'message-circle';
-            } else if (route.name === 'Statistics') {
-              iconName = 'bar-chart-2';
             } else if (route.name === 'Profile') {
               iconName = 'user';
             }
@@ -70,11 +67,6 @@ export default function App() {
           name="Favorites" 
           component={Favorites} 
           options={{ tabBarLabel: '收藏' }}
-        />
-        <Tab.Screen 
-          name="Statistics" 
-          component={Statistics} 
-          options={{ tabBarLabel: '統計' }}
         />
         <Tab.Screen 
           name="Community" 
