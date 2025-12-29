@@ -1546,3 +1546,41 @@ export const badgeDefinitions = [
     icon: "🗺️"
   }
 ];
+
+// 統計數據
+export const statisticsData = {
+  // 瀏覽記錄 (模擬數據)
+  viewHistory: [
+    { listingId: 1, timestamp: '2024-01-15T10:30:00Z' },
+    { listingId: 3, timestamp: '2024-01-15T11:15:00Z' },
+    { listingId: 7, timestamp: '2024-01-15T14:20:00Z' },
+    { listingId: 10, timestamp: '2024-01-16T09:45:00Z' },
+    { listingId: 14, timestamp: '2024-01-16T16:30:00Z' },
+  ],
+  
+  // 搜尋記錄
+  searchHistory: [
+    { query: '套房', timestamp: '2024-01-15T10:00:00Z' },
+    { query: '中央路', timestamp: '2024-01-15T11:00:00Z' },
+    { query: '3000', timestamp: '2024-01-16T09:00:00Z' },
+  ],
+  
+  // 市場趨勢數據
+  marketTrends: {
+    avgRentByMonth: [
+      { month: '2023-07', avgRent: 3100 },
+      { month: '2023-08', avgRent: 3150 },
+      { month: '2023-09', avgRent: 3200 },
+      { month: '2023-10', avgRent: 3180 },
+      { month: '2023-11', avgRent: 3250 },
+      { month: '2023-12', avgRent: 3300 },
+      { month: '2024-01', avgRent: 3280 },
+    ],
+    popularAreas: [
+      { area: '中央路周邊', count: 28 },
+      { area: '五興路周邊', count: 12 },
+      { area: '平鎮區', count: 8 },
+      { area: '其他區域', count: 2 },
+    ]
+  }
+};
